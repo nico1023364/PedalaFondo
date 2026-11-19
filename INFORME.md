@@ -2,6 +2,7 @@
 
 **Proyecto:** Aplicación web de ciclismo con base de datos desplegada en Microsoft Azure.
 **Repositorio:** https://github.com/nico1023364/PedalaFondo
+**URL desplegada:** https://pedalafondo-jhoan2-cvadddd4fjh8dbdz.chilecentral-01.azurewebsites.net/
 **Fecha de entrega:** 19 de noviembre de 2026
 **Integrantes:** _(completar)_
 
@@ -74,7 +75,8 @@ Datos iniciales cargados: **3 planes, 2 noticias, 3 competencias y 8 elementos m
    plan Basic, autenticación SQL (usuario `sqladmin`). Firewall con acceso desde
    servicios de Azure y desde la IP del cliente.
 3. **App Service:** Linux, Node 22 LTS, plan gratuito F1, región Chile Central,
-   nombre `pedalafondo-jhoan`. Implementación continua desde GitHub (rama `main`).
+   nombre `pedalafondo-jhoan2`. Implementación continua desde GitHub (rama `main`)
+   mediante el workflow `.github/workflows/main_pedalafondo-jhoan2.yml`.
 4. **Variables de entorno en App Service:**
 
 | Variable | Uso |
@@ -115,7 +117,8 @@ Datos iniciales cargados: **3 planes, 2 noticias, 3 competencias y 8 elementos m
 5. GitHub Actions / Deployment Center con el despliegue correcto.
    _[Captura aquí]_
 
-6. Sitio web principal funcionando (URL pública).
+6. Sitio web principal funcionando en
+   `https://pedalafondo-jhoan2-cvadddd4fjh8dbdz.chilecentral-01.azurewebsites.net/`.
    _[Captura aquí]_
 
 7. Respuesta de `/api/health` con `"database": "up"`.
