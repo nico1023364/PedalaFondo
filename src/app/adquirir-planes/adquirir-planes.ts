@@ -1,54 +1,88 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ApiService, Plan } from '../services/api.service';
 
 @Component({
   selector: 'app-adquirir-planes',
   standalone: true,
-  imports: [FormsModule, CommonModule], 
+  imports: [FormsModule, CommonModule],
   templateUrl: './adquirir-planes.html',
   styleUrls: ['./adquirir-planes.css'],
 })
-export class AdquirirPlanes {
+export class AdquirirPlanes implements OnInit {
+  name = '';
+  lastname = '';
+  phone = '';
+  city = '';
+  email = '';
+  selectedPlan = '';
 
-  name: string = '';
-  lastname: string = '';
-  phone: string = '';
-  city: string = '';
-  email: string = '';
-  selectedPlan: string = '';
+  sending = false;
+  errorMessage = '';
 
-  plans = [
-    { name: 'Plan Rodada', price: '20.000' },
-    { name: 'Plan Fondo', price: '30.000' },
-    { name: 'Plan Pro', price: '50.000' }
+  plans: Plan[] = [
+    { name: 'Plan Rodada', price: '20.000', description: '' },
+    { name: 'Plan Fondo', price: '30.000', description: '' },
+    { name: 'Plan Pro', price: '50.000', description: '' }
   ];
 
-  constructor(private router: Router) {}
+  constructor(
+    private readonly router: Router,
+    private readonly api: ApiService,
+  ) {}
+
+  ngOnInit(): void {
+    this.selectedPlan = this.plans[0].name;
+    this.api.getPlanes().subscribe({
+      next: (planes) => {
+        if (!planes.length) return;
+        this.plans = planes;
+        if (!this.selectedPlan) this.selectedPlan = planes[0].name;
+      },
+      error: () => {
+        // Sin base de datos disponible se usan los planes locales.
+      },
+    });
+  }
 
   onSubmit(): void {
+    this.errorMessage = '';
+
     if (
-      this.name &&
-      this.lastname &&
-      this.phone &&
-      this.city &&
-      this.email &&
-      this.selectedPlan
+      !this.name ||
+      !this.lastname ||
+      !this.phone ||
+      !this.city ||
+      !this.email ||
+      !this.selectedPlan
     ) {
-
-      console.log('Formulario enviado:', {
-        name: this.name,
-        lastname: this.lastname,
-        phone: this.phone,
-        city: this.city,
-        email: this.email,
-        selectedPlan: this.selectedPlan
-      });
-
-      this.router.navigate(['/gracias']);
-    } else {
       alert('Por favor, complete todos los campos.');
+      return;
     }
+
+    this.sending = true;
+    this.api
+      .crearInscripcion({
+        nombre: this.name,
+        apellidos: this.lastname,
+        telefono: this.phone,
+        ciudad: this.city,
+        email: this.email,
+        plan: this.selectedPlan,
+      })
+      .subscribe({
+        next: () => {
+          this.sending = false;
+          this.router.navigate(['/gracias']);
+        },
+        error: (error) => {
+          this.sending = false;
+          this.errorMessage =
+            error?.error?.message ||
+            'No se pudo registrar la inscripción. Intenta de nuevo en unos minutos.';
+        },
+      });
   }
 }

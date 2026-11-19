@@ -1,16 +1,28 @@
 <div id="noticias" class="noticias-container container">
   <h2>Noticias y Actualidad</h2>
-  <div class="news-list owl-carousel owl-theme-default">
-    <div class="item-noticia" *ngFor="let article of newsArticles">
-      <div class="left">
-        <img [src]="article.image" alt="Imagen de noticia">
+  <div class="news-list">
+    @if (currentArticle; as article) {
+      <div class="item-noticia">
+        <div class="left">
+          <img [src]="article.image" [alt]="article.title">
+        </div>
+        <div class="right">
+          <h3>{{ article.title }}</h3>
+          <p>{{ article.content }}</p>
+          <a [href]="article.link || '#'">Leer más</a>
+        </div>
       </div>
-      <div class="right">
-        <h3>{{ article.title }}</h3>
-        <p>{{ article.content }}</p>
-        <a [href]="article.link">Leer más</a>
+
+      <div class="news-dots">
+        @for (item of newsArticles; track item.id ?? $index; let i = $index) {
+          <button
+            type="button"
+            class="dot"
+            [class.active]="i === current"
+            (click)="show(i)"
+            [attr.aria-label]="'Ver noticia ' + (i + 1)"></button>
+        }
       </div>
-    </div>
+    }
   </div>
 </div>
-

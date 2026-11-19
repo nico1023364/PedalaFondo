@@ -1,59 +1,58 @@
-# Myapp
+# Kilómetro Cero | Pedal a Fondo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
+Sitio web de ciclismo colombiano: noticias, competencias internacionales, planes de
+entrenamiento, galería multimedia y formulario de inscripción.
 
-## Development server
+- **Frontend:** Angular 20 (standalone components).
+- **Backend:** Node.js + Express (`server/`).
+- **Base de datos:** Azure SQL Database (SQL Server).
+- **Despliegue:** Azure App Service (Linux, Node 22) con GitHub Actions.
 
-To start a local development server, run:
+## Estructura
 
-```bash
-ng serve
+```
+src/app/
+  services/api.service.ts   # Cliente HTTP del API
+  admin/                    # Vista de inscripciones (token)
+server/
+  index.js                  # API + servidor de archivos estáticos
+  db.js                     # Pool de conexión a Azure SQL
+  schema.sql                # Tablas
+  seed.sql                  # Datos iniciales
+  init-db.js                # Inicialización manual (opcional)
+public/assets/              # Imágenes y logo locales
+README-AZURE.md             # Guía de despliegue en Azure
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Desarrollo local
 
 ```bash
-ng generate component component-name
+npm install
+npm run build      # compila Angular en dist/myapp/browser
+npm start          # API + frontend en http://localhost:3000
+
+npm run dev        # Angular con recarga en http://localhost:4200 (proxy /api -> 3000)
+
+npm run test:unit  # pruebas unitarias (Karma)
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Sin `SQL_CONNECTION_STRING` la web funciona con datos locales de respaldo y el API
+responde `503` en las rutas de base de datos.
 
-```bash
-ng generate --help
-```
+## Configuración
 
-## Building
+Copia `.env.example` a `.env` y completa:
 
-To build the project run:
+- `SQL_CONNECTION_STRING`: cadena ADO.NET de Azure SQL Database.
+- `ADMIN_TOKEN`: token para `/admin` y `GET /api/inscripciones`.
 
-```bash
-ng build
-```
+## Despliegue en Azure
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Sigue **[README-AZURE.md](README-AZURE.md)**: grupo de recursos, Azure SQL Database,
+App Service y conexión con GitHub. El servidor crea el esquema y los datos iniciales
+automáticamente al arrancar.
 
-## Running unit tests
+## Créditos de imágenes
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Las fotografías son de Wikimedia Commons (uso educativo). Ver
+[`public/assets/images/CREDITOS.md`](public/assets/images/CREDITOS.md).

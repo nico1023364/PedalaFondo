@@ -1,0 +1,55 @@
+<div class="admin-page container">
+  <h1>Inscripciones</h1>
+  <p class="subtitle">Vista de administración conectada a Azure SQL Database.</p>
+
+  <form class="token-form" (ngSubmit)="load()">
+    <label for="token">Token de administración</label>
+    <div class="token-row">
+      <input
+        id="token"
+        type="password"
+        name="token"
+        [(ngModel)]="token"
+        placeholder="ADMIN_TOKEN"
+        autocomplete="off" />
+      <button type="submit" [disabled]="loading">
+        {{ loading ? 'Cargando...' : 'Consultar' }}
+      </button>
+    </div>
+  </form>
+
+  <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+  <div class="empty" *ngIf="loaded && !errorMessage && inscriptions.length === 0">
+    Todavía no hay inscripciones registradas.
+  </div>
+
+  <div class="table-wrap" *ngIf="inscriptions.length > 0">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Teléfono</th>
+          <th>Ciudad</th>
+          <th>Correo</th>
+          <th>Plan</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of inscriptions">
+          <td>{{ item.id }}</td>
+          <td>{{ item.nombre }} {{ item.apellidos }}</td>
+          <td>{{ item.telefono }}</td>
+          <td>{{ item.ciudad }}</td>
+          <td>{{ item.email }}</td>
+          <td>{{ item.plan }}</td>
+          <td>{{ item.creadoEn | date: 'short' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <a class="back" routerLink="/">&larr; Volver al inicio</a>
+</div>

@@ -1,0 +1,130 @@
+.admin-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 140px 20px 80px;
+  min-height: 70vh;
+}
+
+h1 {
+  font-size: 44px;
+  color: rgb(37, 37, 37);
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: rgb(81, 81, 81);
+}
+
+.token-form {
+  margin: 30px 0;
+  max-width: 520px;
+}
+
+.token-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: rgb(37, 37, 37);
+}
+
+.token-form .token-row {
+  display: flex;
+  gap: 12px;
+}
+
+.token-form input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.token-form button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  background: rgb(90, 75, 58);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.token-form button:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+.error {
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fdecea;
+  color: #b3261e;
+  max-width: 520px;
+}
+
+.empty {
+  padding: 18px;
+  border-radius: 10px;
+  background: white;
+  border: 1px dashed #ccc;
+  color: rgb(81, 81, 81);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+th {
+  background: rgb(37, 37, 37);
+  color: white;
+  font-weight: 600;
+}
+
+tbody tr:hover {
+  background: #fafafa;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 30px;
+  color: rgb(90, 75, 58);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back:hover {
+  color: rgb(255, 214, 10);
+}
+
+@media (max-width: 600px) {
+  .admin-page {
+    padding-top: 110px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .token-form .token-row {
+    flex-direction: column;
+  }
+}
