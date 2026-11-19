@@ -74,14 +74,16 @@ def main() -> None:
 
     # 1. Portada
     image, draw = base_slide("Kilómetro Cero | Pedal a Fondo", 1)
-    draw.rectangle((60, 190, WIDTH - 60, 520), fill=PANEL)
-    draw.text((95, 230), "Aplicación web con base de datos desplegada en Microsoft Azure",
+    draw.rectangle((60, 190, WIDTH - 60, 565), fill=PANEL)
+    draw.text((95, 225), "Aplicación web con base de datos desplegada en Microsoft Azure",
               font=font(FONT_REGULAR, 30), fill=ACCENT)
-    draw.text((95, 300), "Angular 20  •  Node.js / Express  •  Azure SQL Database",
+    draw.text((95, 290), "Angular 20  •  Node.js / Express  •  Azure SQL Database",
               font=font(FONT_REGULAR, 24), fill=WHITE)
-    draw.text((95, 360), "Integrantes: _(completar nombres)_", font=font(FONT_REGULAR, 22), fill=GRAY)
-    draw.text((95, 405), "19 de noviembre de 2026", font=font(FONT_REGULAR, 22), fill=GRAY)
-    draw.text((95, 455), "pedalafondo-jhoan2-cvadddd4fjh8dbdz.chilecentral-01.azurewebsites.net",
+    draw.text((95, 345), "Integrantes:", font=font(FONT_REGULAR, 21), fill=GRAY)
+    draw.text((95, 378), "Jhoan Nicolas Obando Alfonso", font=font(FONT_BOLD, 22), fill=WHITE)
+    draw.text((95, 412), "Maria Camila Urrego", font=font(FONT_BOLD, 22), fill=WHITE)
+    draw.text((95, 465), "19 de noviembre de 2026", font=font(FONT_REGULAR, 20), fill=GRAY)
+    draw.text((95, 510), "pedalafondo-jhoan2-cvadddd4fjh8dbdz.chilecentral-01.azurewebsites.net",
               font=font(FONT_MONO, 17), fill=WHITE)
     slides.append(image)
 
@@ -190,12 +192,12 @@ def main() -> None:
 
     # 11. Aportes e IA
     slides.append(bullets_slide("10. Aportes e IA generativa", 11, [
-        "Tabla de aportes por integrante con roles CRediT (ver informe, sección 10).",
-        "Integrante 1: software, datos, validación y redacción del borrador.",
-        "Integrante 2: investigación, recursos, supervisión y revisión final.",
+        "Aportes con roles CRediT (detalle en la sección 10 del informe).",
+        "Jhoan Nicolas Obando Alfonso: software, datos, validación y redacción del borrador.",
+        "Maria Camila Urrego: investigación, recursos, supervisión y revisión final.",
         "El LLM se usó como apoyo para código y borradores; siempre fue supervisado.",
         "Las evidencias y resultados son reales, obtenidos del despliegue en Azure.",
-    ]))
+    ], size=22))
 
     # 12. Cierre
     image, draw = base_slide("Gracias", 12)

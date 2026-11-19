@@ -4,7 +4,7 @@ Duración recomendada: **12 minutos**. El video debe mostrar la pantalla mientra
 
 | Tiempo | Diapositiva | Contenido | Qué decir |
 | --- | --- | --- | --- |
-| 0:00 – 0:30 | 1. Portada | Título, integrantes, URL y repo. | "Presentamos Kilómetro Cero, una aplicación web de ciclismo desplegada en Azure con base de datos." |
+| 0:00 – 0:30 | 1. Portada | Título, integrantes (Jhoan Nicolas Obando Alfonso y Maria Camila Urrego), URL y repo. | "Presentamos Kilómetro Cero, una aplicación web de ciclismo desplegada en Azure con base de datos." |
 | 0:30 – 1:30 | 2. Problema | Imágenes rotas (404), sin base de datos, sin despliegue. | "El proyecto original tenía tres problemas: las fotos no cargaban, el formulario no guardaba nada y no existía una URL pública." |
 | 1:30 – 2:30 | 3. Justificación y objetivos | Beneficios de Azure, objetivo general y específicos. | "Mover la solución a Azure permite persistencia, acceso público e integración continua." |
 | 2:30 – 3:30 | 4. Marco teórico | Angular, App Service, Azure SQL, REST, GitHub Actions. | "Usamos Angular 20 como frontend, Node y Express como API, y Azure SQLcomo base de datos administrada." |
@@ -14,7 +14,7 @@ Duración recomendada: **12 minutos**. El video debe mostrar la pantalla mientra
 | 7:30 – 10:30 | 8. Demo en vivo | Navegador (ver pasos abajo). | "Ahora demostramos el funcionamiento real." |
 | 10:30 – 11:30 | 9. Resultados | `/api/health`, `/admin` con la inscripción. | "La respuesta database up confirma la conexión; la fila en /admin confirma que el formulario guarda en Azure SQL." |
 | 11:30 – 12:30 | 10. Conclusiones y trabajos futuros | Logros y mejoras. | "Cumplimos el objetivo; como trabajo futuro: autenticación real, gráficas y CDN." |
-| 12:30 – 13:00 | 11. Aportes y cierre | Tabla CRediT y aclaración de IA. | "Cada integrante aportó en estas áreas; el uso de IA fue de apoyo y siempre supervisado." |
+| 12:30 – 13:00 | 11. Aportes y cierre | CRediT: Jhoan Nicolas Obando Alfonso (software, datos, validación, redacción) y Maria Camila Urrego (investigación, recursos, supervisión, revisión); aclaración de IA. | "Cada integrante aportó en estas áreas; el uso de IA fue de apoyo y siempre supervisado." |
 
 ## Demo en vivo — pasos exactos
 
