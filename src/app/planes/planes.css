@@ -1,6 +1,6 @@
 .planes-container {
   padding: 60px 0;
-  background: linear-gradient(rgba(37, 37, 37, 0.68), rgba(37, 37, 37, 0.68)), url("https://hosting.renderforestsites.com/28385989/1545028/media/de08764eb9b689189b2e7d810239855f.png") center center / cover no-repeat;
+  background: linear-gradient(rgba(37, 37, 37, 0.68), rgba(37, 37, 37, 0.68)), url("/assets/images/training.jpg") center center / cover no-repeat;
 }
 
 .plans {

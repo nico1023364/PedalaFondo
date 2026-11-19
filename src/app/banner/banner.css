@@ -2,7 +2,7 @@
   position: relative;
   height: 80vh;
   width: 100%;
-  background: linear-gradient(rgba(37, 37, 37, 0.4), rgba(37, 37, 37, 0.4)), url("https://hosting.renderforestsites.com/28385989/1545028/media/c52d4689f14861e00521544ceb2c8266.png") center center / cover no-repeat;
+  background: linear-gradient(rgba(37, 37, 37, 0.45), rgba(37, 37, 37, 0.45)), url("/assets/images/hero-banner.jpg") center center / cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;

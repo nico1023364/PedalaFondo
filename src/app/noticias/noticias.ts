@@ -10,8 +10,8 @@ declare var $: any;
 })
 export class NoticiasComponent implements AfterViewInit{
   newsArticles = [
-    { title: 'Ciclismo en Colombia', content: 'Nuevos talentos emergentes en el ciclismo nacional.', image: 'https://hosting.renderforestsites.com/28385989/1545028/media/9cffb50e54692498be83afa7a6756de9.png', link :'/noticias' },
-    { title: 'Competencias internacionales', content: 'Tour de Francia 2025: resultados, análisis de etapas y desempeño de los colombianos.', image: 'https://hosting.renderforestsites.com/28385989/1545028/media/105c451ec91535b777fc69eb1bef3abc.png' }
+    { title: 'Ciclismo en Colombia', content: 'Nuevos talentos emergentes en el ciclismo nacional.', image: '/assets/images/fans.jpg', link :'/noticias' },
+    { title: 'Competencias internacionales', content: 'Tour de Francia 2025: resultados, análisis de etapas y desempeño de los colombianos.', image: '/assets/images/tour.jpg' }
   ];
 
   ngAfterViewInit(): void {

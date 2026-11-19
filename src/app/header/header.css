@@ -18,8 +18,9 @@
 }
 
 .logo img {
-  filter: hue-rotate(180deg) brightness(2.5) contrast(1.2) saturate(0.3);
-  width: 80px;
+  width: 168px;
+  height: auto;
+  display: block;
 }
 
 .nav-links {
