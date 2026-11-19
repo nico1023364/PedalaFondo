@@ -77,7 +77,7 @@ function mapMultimedia(row) {
 
 function mapInscripcion(row) {
   return {
-    id: row.id,
+    id: Number(row.id),
     nombre: row.nombre,
     apellidos: row.apellidos,
     telefono: row.telefono,
@@ -226,7 +226,7 @@ app.post('/api/inscripciones', dbRoute(async (req, res) => {
 
   const created = createdRows[0] || {};
   res.status(201).json({
-    id: created.id,
+    id: Number(created.id),
     creadoEn: created.creado_en instanceof Date ? created.creado_en.toISOString() : created.creado_en,
     message: 'Inscripción registrada correctamente.',
   });

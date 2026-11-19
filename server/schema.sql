@@ -51,7 +51,7 @@ BEGIN
         telefono  NVARCHAR(30)  NOT NULL,
         ciudad    NVARCHAR(80)  NOT NULL,
         email     NVARCHAR(160) NOT NULL,
-        plan      NVARCHAR(80)  NOT NULL,
+        [plan]    NVARCHAR(80)  NOT NULL,
         creado_en DATETIMEOFFSET(0) NOT NULL CONSTRAINT DF_inscripciones_creado DEFAULT (SYSDATETIMEOFFSET())
     );
 END;

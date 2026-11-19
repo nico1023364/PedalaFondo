@@ -25,12 +25,12 @@ const queries = {
   `,
   planActivo: `SELECT id FROM dbo.planes WHERE nombre = @plan AND activo = 1`,
   insertInscripcion: `
-    INSERT INTO dbo.inscripciones (nombre, apellidos, telefono, ciudad, email, plan)
+    INSERT INTO dbo.inscripciones (nombre, apellidos, telefono, ciudad, email, [plan])
     OUTPUT INSERTED.id, INSERTED.creado_en
     VALUES (@nombre, @apellidos, @telefono, @ciudad, @email, @plan)
   `,
   inscripciones: `
-    SELECT id, nombre, apellidos, telefono, ciudad, email, plan, creado_en
+    SELECT id, nombre, apellidos, telefono, ciudad, email, [plan], creado_en
     FROM dbo.inscripciones
     ORDER BY creado_en DESC, id DESC
     OFFSET 0 ROWS FETCH NEXT @limit ROWS ONLY
