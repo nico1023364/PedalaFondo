@@ -1,0 +1,99 @@
+.banner {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  background: linear-gradient(rgba(37, 37, 37, 0.4), rgba(37, 37, 37, 0.4)), url("https://hosting.renderforestsites.com/28385989/1545028/media/c52d4689f14861e00521544ceb2c8266.png") center center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-content {
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+.cta-button {
+  background-color: #FF5722;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 96px;
+}
+
+h2 {
+  color: rgb(255, 214, 10);
+  font-size: 42px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+      font-size: 70px;
+  }
+  h2 {
+      font-size: 34px;
+  }
+  p {
+      font-size: 16px;
+  }
+  .banner {
+      height: 70vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+      font-size: 55px;
+  }
+  h2 {
+      font-size: 30px;
+  }
+  p {
+      font-size: 15px;
+      margin-top: 30px;
+  }
+  .cta-button {
+      padding: 12px 25px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  h1 {
+      font-size: 40px;
+  }
+  h2 {
+      font-size: 24px;
+  }
+  p {
+      font-size: 14px;
+      margin-top: 25px;
+  }
+  .banner {
+      height: 60vh;
+      padding: 0 20px;
+  }
+  .cta-button {
+      padding: 10px 20px;
+      font-size: 14px;
+  }
+}

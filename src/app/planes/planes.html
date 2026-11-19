@@ -1,0 +1,26 @@
+<div class="planes-container">
+  <div class="container">
+    <div class="top">
+    <h2>Entrenamiento y Rendimiento</h2>
+    <h3>Mejora tu pedaleo, supera tus límites.</h3>
+  </div>
+    <div class="plans">
+      <div *ngFor="let plan of plans">
+       <a [routerLink]="['/adquirir-planes']" class="cta-button" routerLinkActive="active">
+        <div class="plan-card">
+          <div class="left">
+          <h3>{{ plan.name }}</h3>
+          <p>{{ plan.description }}</p>
+          <p class="cta">¡Quiero Inscribirme!</p>
+        </div>
+        <div class="right">
+          <p>${{ plan.price }}</p>
+        </div>
+
+        </div>
+    </a>
+      </div>
+    </div>
+  </div>
+  </div>
+  

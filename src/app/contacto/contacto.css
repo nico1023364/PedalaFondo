@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+h2{
+    color: rgb(37, 37, 37);
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0px 0 30px 0;
+}
+
+p{
+    font-size: 18px;
+    color: rgb(81, 81, 81);
+    margin-bottom: 10px;
+}
+
+a{
+    display: block;
+    color: rgb(90, 75, 58);
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+iframe{
+    width: 500px;
+    height: 400px;
+}
+
+@media (max-width: 1200px) {
+    iframe{
+        width: 450px;
+        height: 360px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container{
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    h2{
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    p, a{
+        font-size: 17px;
+    }
+
+    iframe{
+        width: 100%;
+        height: 350px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container{
+        margin-top: 50px;
+        gap: 25px;
+    }
+
+    h2{
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    p, a{
+        font-size: 16px;
+    }
+
+    iframe{
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container{
+        margin-top: 40px;
+        gap: 20px;
+    }
+
+    h2{
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    p, a{
+        font-size: 15px;
+    }
+
+    iframe{
+        width: 100%;
+        height: 260px;
+    }
+}

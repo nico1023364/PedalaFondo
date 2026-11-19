@@ -1,0 +1,25 @@
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a [routerLink]="['/']">
+        <img src="https://hosting.renderforestsites.com/28385989/1545028/media/7a6257eb48ab44a263579788fa53a772.png" alt="Kilómetro Cero">
+      </a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="nav-links">
+      <a href="#noticias">Noticias</a>
+      <a href="#entrenamiento">Entrenamiento</a>
+      <a href="#comunidad-ciclista">Comunidad</a>
+      <a href="#multimedia">Multimedia</a>
+      <a href="#contacto">Contacto</a>
+      <a [routerLink]="['/adquirir-planes']">Inscribirme</a>
+    </nav>
+  </div>
+</header>

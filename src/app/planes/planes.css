@@ -1,0 +1,135 @@
+.planes-container {
+  padding: 60px 0;
+  background: linear-gradient(rgba(37, 37, 37, 0.68), rgba(37, 37, 37, 0.68)), url("https://hosting.renderforestsites.com/28385989/1545028/media/de08764eb9b689189b2e7d810239855f.png") center center / cover no-repeat;
+}
+
+.plans {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.plan-card {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  max-width: 800px;
+  min-height: 205px;
+  justify-content: center;
+  transition: .2s all ease-in-out;
+}
+
+.plan-card h3 {
+  color: rgb(37, 37, 37);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.plan-card p {
+  color: rgb(81, 81, 8);
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.plan-card .left {
+  width: 70%;
+  padding: 32px 40px;
+  border-right: 4px dotted rgb(37, 37, 37);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.plan-card .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  padding: 32px 40px;
+}
+
+.plan-card .right p {
+  color: rgb(37, 37, 37);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.plans .plan-card:hover {
+  background-color: rgb(255, 214, 10);
+  transform: scale(1.04);
+}
+
+.plans .plan-card:hover .left {
+  border-color: #ffffff;
+}
+
+.plans .plan-card:hover p,
+.plans .plan-card:hover h3 {
+  color: #ffffff !important;
+}
+
+.top h2 {
+  font-size: 42px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.top h3 {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+@media screen and (max-width: 1024px) {
+  .plan-card {
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .plan-card {
+    flex-direction: column;
+    max-width: 90%;
+    min-height: auto;
+  }
+  .plan-card .left,
+  .plan-card .right {
+    width: 100%;
+    border-right: none;
+    padding: 24px;
+    text-align: center;
+  }
+  .plan-card .right p {
+    font-size: 28px;
+  }
+  .plan-card h3 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .plan-card {
+    max-width: 95%;
+  }
+  .plan-card .right p {
+    font-size: 24px;
+  }
+  .plan-card h3 {
+    font-size: 22px;
+  }
+  .top h2 {
+    font-size: 32px;
+  }
+  .top h3 {
+    font-size: 16px;
+  }
+}
+a{
+  text-decoration: none;
+}
+p.cta{
+  margin-top: 10px;
+  text-decoration: underline;
+}

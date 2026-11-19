@@ -1,0 +1,103 @@
+.comunidad-ciclista-container {
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .comunidad-ciclista-list {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .comunidad-ciclista-item {
+    width: 260px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(37, 37, 37, 0.15) 0px 0px 24px;
+    height: 480px;
+    transition: .2s all ease-in-out;
+  }
+  
+  .comunidad-ciclista-item:hover {
+    transform: translateY(-20px);
+  }
+  
+  .comunidad-ciclista-item img {
+    height: 55%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .comunidad-ciclista-item .content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .comunidad-ciclista-item h3 {
+    font-size: 20px;
+    color: rgb(37, 37, 37);
+  }
+  
+  .comunidad-ciclista-item a {
+    font-size: 14px;
+    color: rgb(37, 37, 37);
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  .comunidad-ciclista-item p {
+    color: rgb(37, 37, 37);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  h2 {
+    font-size: 42px;
+    color: rgb(90, 75, 58);
+    font-weight: 700;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .comunidad-ciclista-list {
+      gap: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .comunidad-ciclista-list {
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+    .comunidad-ciclista-item {
+      width: 45%;
+      height: 420px;
+    }
+    h2 {
+      font-size: 34px;
+    }
+  }
+  
+  @media screen and (max-width: 520px) {
+    .comunidad-ciclista-list {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .comunidad-ciclista-item {
+      width: 90%;
+      height: auto;
+    }
+    .comunidad-ciclista-item img {
+      height: 220px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+  }
+  

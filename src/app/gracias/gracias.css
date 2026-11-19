@@ -1,0 +1,42 @@
+.thanks-container {
+    max-width: 600px;
+    margin: 160px auto 80px auto;
+    padding: 40px 30px;
+    background: #ffffff;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 1px solid #f2f2f2;
+    animation: fadeIn 0.7s ease-out;
+}
+
+.thanks-container h2 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.thanks-container p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 0;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Opción para un fondo suave en toda la página */
+body {
+    background: #f7f8fc; /* puedes cambiar color si quieres */
+    font-family: 'Arial', sans-serif;
+}

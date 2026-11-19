@@ -1,0 +1,111 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo img {
+  filter: hue-rotate(180deg) brightness(2.5) contrast(1.2) saturate(0.3);
+  width: 80px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #FF5722;
+}
+
+/* --- MENU HAMBURGUESA --- */
+
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* --- responsive --- */
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    width: 60%;
+    height: 100vh;
+    transition: 0.3s ease;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    right: 0;
+  }
+
+  /* animación del ícono */
+  #menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  #menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-12px) translateX(3px);
+  }
+
+  .nav-links a {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .logo img {
+    width: 65px;
+  }
+
+  .nav-links {
+    width: 75%;
+  }
+}

@@ -1,0 +1,15 @@
+<div id="competencias" class="competencias-container">
+  <div class="container">
+    <h2>Competencias Internacionales</h2>
+    <div class="competencia-item" *ngFor="let competition of competitions">
+      <div class="left">
+        <img [src]="competition.image" alt="{{ competition.name }}">
+      </div>
+      <div class="right">
+        <h3>{{ competition.name }}</h3>
+        <p>{{ competition.date }}</p>
+        <p>{{ competition.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

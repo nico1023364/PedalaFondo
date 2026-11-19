@@ -1,0 +1,14 @@
+<div class="multimedia-container">
+  <div class="container">
+    <h2>Multimedia</h2>
+    <p>Descubre las carreras recreativas y competitivas disponibles este año.</p>
+    <div class="media-list">
+      <div class="media-item" *ngFor="let media of mediaItems">
+        
+        <a [href]="media.link" class="cta-button">
+          <img [src]="media.image" alt="media.title">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

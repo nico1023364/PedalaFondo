@@ -1,0 +1,16 @@
+<div id="noticias" class="noticias-container container">
+  <h2>Noticias y Actualidad</h2>
+  <div class="news-list owl-carousel owl-theme-default">
+    <div class="item-noticia" *ngFor="let article of newsArticles">
+      <div class="left">
+        <img [src]="article.image" alt="Imagen de noticia">
+      </div>
+      <div class="right">
+        <h3>{{ article.title }}</h3>
+        <p>{{ article.content }}</p>
+        <a [href]="article.link">Leer más</a>
+      </div>
+    </div>
+  </div>
+</div>
+

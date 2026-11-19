@@ -1,0 +1,14 @@
+<div id="comunidad-ciclista" class="comunidad-ciclista-container container">
+  <h2>Comunidad Ciclista</h2>
+
+  <div class="comunidad-ciclista-list">
+    <div class="comunidad-ciclista-item" *ngFor="let item of comunidadItems">
+      <img [src]="item.image" alt="{{ item.title }}">
+      <div class="content">
+        <h3>{{ item.title }}</h3>
+        <a [href]="item.link">{{ item.linkText }}</a>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

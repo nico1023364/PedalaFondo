@@ -1,0 +1,137 @@
+.ciclismo{
+    display:flex;
+    justify-content: space-between;
+    gap: 100px;
+    align-items: center;
+    margin-top: 50px;
+}
+.ciclismo .left, .ciclismo .right{
+    width: 100%;
+}
+
+.ciclismo .row-top{
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.ciclismo .row-top img:first-child{
+    width: 40%;
+}
+.ciclismo .row-bot img:last-child{
+    width: 40%;
+}
+.ciclismo .row-top img, .ciclismo .row-bot img{
+    width: 60%;
+    height: 235px;
+    object-fit: cover;
+    object-position: center;
+}
+.ciclismo .row-bot{
+    display: flex;
+    gap: 15px;
+}
+
+.ciclismo .right h2{
+    font-weight: 700;
+    font-size: 42px;
+    color: rgb(37, 37, 37);
+    margin-bottom: 30px;
+}
+
+.ciclismo .right p{
+    font-size:18px;
+    color: rgb(81, 81, 81);
+}
+
+@media (max-width: 1200px) {
+    .ciclismo{
+        gap: 60px;
+    }
+
+    .ciclismo .right h2{
+        font-size: 36px;
+    }
+
+    .ciclismo .right p{
+        font-size: 17px;
+    }
+
+    .ciclismo .row-top img,
+    .ciclismo .row-bot img{
+        height: 210px;
+    }
+}
+
+@media (max-width: 992px) {
+    .ciclismo{
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .ciclismo .left,
+    .ciclismo .right{
+        width: 100%;
+    }
+
+    .ciclismo .right h2{
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .ciclismo .right p{
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ciclismo{
+        gap: 30px;
+    }
+
+    .ciclismo .row-top,
+    .ciclismo .row-bot{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ciclismo .row-top img:first-child,
+    .ciclismo .row-bot img:last-child,
+    .ciclismo .row-top img,
+    .ciclismo .row-bot img{
+        width: 100%;
+        height: 200px;
+    }
+
+    .ciclismo .right h2{
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .ciclismo .right p{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ciclismo{
+        margin-top: 30px;
+        gap: 25px;
+    }
+
+    .ciclismo .row-top img,
+    .ciclismo .row-bot img{
+        height: auto;
+    }
+
+    .ciclismo .right h2{
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .ciclismo .right p{
+        font-size: 14px;
+    }
+}
